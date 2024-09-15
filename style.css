@@ -1,0 +1,56 @@
+/* CSS reset */
+body{
+    margin: 0px;
+}
+header{
+    background-color: darkgoldenrod;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    gap:  20px;
+} 
+
+header a {
+    text-decoration:none ;
+    color: white;
+}
+
+header > #ham {
+    display: none;
+}
+@media screen and (max-width:426px) {
+    header{
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+    }
+    header nav {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    header ul{
+        flex-flow: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    header > #ham{
+        display: flex;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+
+    .show{
+        display: flex;
+    }
+}
